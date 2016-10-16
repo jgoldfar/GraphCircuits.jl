@@ -5,6 +5,6 @@ include("johnson.jl")
 
 include("hadwick_james.jl")
 
-findcycles(g::DiGraph) = findcycles(g, Val{:johnson})
+findcircuits(g::DiGraph) = findcircuits(g, Val{:johnson})
 
 end # module
