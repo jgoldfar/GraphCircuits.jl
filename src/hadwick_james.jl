@@ -1,3 +1,3 @@
-findcircuits(g::DiGraph, ::Type{Val{:hadwick_james}}) = hadwick_james(g)
+find_circuits(g::DiGraph, ::Type{Val{:hadwick_james}}) = hadwick_james(g)
 
 function hadwick_james(g::DiGraph) end

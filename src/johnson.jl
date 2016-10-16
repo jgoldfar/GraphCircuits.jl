@@ -1,4 +1,4 @@
-findcircuits(g::DiGraph, ::Type{Val{:johnson}}) = johnson(g)
+find_circuits(g::DiGraph, ::Type{Val{:johnson}}) = johnson(g)
 
 """
 

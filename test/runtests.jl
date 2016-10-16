@@ -12,7 +12,7 @@ using LightGraphs
     add_edge!(tarjan_worst_case, k, 1)
     johnson_circuits = find_circuits(tarjan_worst_case, Val{:johnson})
 
-    hadwick_circuits = find_circuits(tarjan_worst_case, Val{:johnson})
+    hadwick_circuits = find_circuits(tarjan_worst_case, Val{:hadwick_james})
 
     @test johnson_circuits == hadwick_circuits
 end
