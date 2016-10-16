@@ -1,6 +1,7 @@
 using GraphCircuits
 using Base.Test
 using LightGraphs
+
 # write your own tests here
 @testset begin
     k = 10
@@ -9,5 +10,9 @@ using LightGraphs
         add_edge!(tarjan_worst_case, i, i + 1)
     end
     add_edge!(tarjan_worst_case, k, 1)
-    find_circuits(tarjan_worst_case)
+    johnson_circuits = find_circuits(tarjan_worst_case, Val{:johnson})
+
+    hadwick_circuits = find_circuits(tarjan_worst_case, Val{:johnson})
+
+    @test johnson_circuits == hadwick_circuits
 end
