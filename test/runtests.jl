@@ -1,5 +1,10 @@
 using GraphCircuits
-using Base.Test
+if VERSION >= v"0.5-"
+  using Base.Test
+else
+  using BaseTestNext
+  const Test = BaseTestNext
+end # Use next-gen test framework for all Julia versions.
 using LightGraphs
 
 @testset begin
