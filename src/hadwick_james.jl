@@ -93,7 +93,7 @@ function unblock!{T}(v::T, blocked::Vector{Bool}, B::Vector{Vector{T}})
     while wPos <= length(Bv)
         w = Bv[wPos]
         wPos += 1 - countAndFilter!(w, Bv)
-        if blocked(w)
+        if blocked[w]
             unblock!(w, blocked, B)
         end
     end
