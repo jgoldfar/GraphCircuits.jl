@@ -39,7 +39,7 @@ function circuit!(g::DiGraph, v1::T, v2::T, blocked::Vector{Bool}, B::Vector{Vec
     push!(stack, v2)
     blocked[v2] = true
 
-    Av = out_neighbors(g, v2)
+    Av = outneighbors(g, v2)
     for w in Av
         (w < v1) && continue
         if w == v1 # Found a circuit
